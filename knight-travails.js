@@ -39,13 +39,13 @@ const ChessSquare = (x, y) => {
   if (squareRegistry.has(name())) {
     return squareRegistry.get(name());
   } else {
-    newSquare = { name, getPredecessor, setPredecessor, createKnightMoves };
+    let newSquare = { name, getPredecessor, setPredecessor, createKnightMoves };
     squareRegistry.set(name(), newSquare);
     return newSquare;
   }
 };
 
-const knightsTravails = (start, finish) => {
+export const knightsTravails = (start, finish) => {
   squareRegistry.clear();
 
   const origin = ChessSquare(...start);

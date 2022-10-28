@@ -1,0 +1,51 @@
+body {
+  max-height: 100vh;
+  text-align: center;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c333.278C68.772%2c324.194%2c140.968%2c346.845%2c203.17%2c316.138C268.668%2c283.804%2c316.447%2c224.674%2c350.691%2c160.155C386.383%2c92.908%2c411.726%2c17.714%2c401.612%2c-57.743C391.454%2c-133.533%2c355.048%2c-208.286%2c294.967%2c-255.59C238.473%2c-300.07%2c156.151%2c-277.552%2c89.184%2c-303.732C12.66%2c-333.648%2c-41.388%2c-428.248%2c-123.03%2c-419.003C-203.453%2c-409.896%2c-252.381%2c-325.356%2c-299.706%2c-259.697C-343.762%2c-198.573%2c-366.487%2c-128.377%2c-385.122%2c-55.372C-405.848%2c25.824%2c-440.933%2c109.749%2c-414.289%2c189.199C-386.812%2c271.134%2c-322.489%2c346.405%2c-240.864%2c374.792C-162.322%2c402.107%2c-82.44%2c344.168%2c0%2c333.278' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1440 1057.846C1571.768 1060.95 1692.071 1188.5410000000002 1817.07 1146.733 1943.367 1104.491 2040.587 977.4259999999999 2069.2690000000002 847.377 2096.953 721.851 2004.362 606.522 1963.057 484.796 1929.995 387.361 1922.19 278.149 1850.931 203.92700000000002 1781.105 131.19799999999998 1670.1100000000001 129.238 1579.413 85.202 1465.44 29.864000000000033 1375.18-105.76300000000003 1249.738-87.97299999999996 1126.363-70.476 1071.0230000000001 75.40100000000001 988.731 168.973 905.75 263.329 790.099 339.81600000000003 765.204 462.979 739.931 588.012 802.092 711.09 855.759 826.8140000000001 909.155 941.954 956.152 1082.558 1074.1779999999999 1129.23 1192.102 1175.862 1313.226 1054.859 1440 1057.846' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0e2a47;
+}
+
+.cell {
+  height: 70px;
+  width: 70px;
+  border: 1px solid grey;
+  border-style: inset;
+}
+
+.blackcell {
+  background-color: black;
+}
+
+.whitecell {
+  background-color: white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+img {
+  height: 55px;
+  width: 55px;
+}
+
+.start {
+  margin-top: 25px;
+}
+.clear {
+  margin-top: 15px;
+}
