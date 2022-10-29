@@ -1,3 +1,5 @@
+import { displayMoves } from "./gameboard.js";
+
 const squareRegistry = new Map();
 
 const ChessSquare = (x, y) => {
@@ -64,7 +66,9 @@ export const knightsTravails = (start, finish) => {
     const prevSquare = path[0].getPredecessor();
     path.unshift(prevSquare);
   }
-  console.log(`The shortest path was ${path.length - 1} moves!`);
-  console.log("The moves were:");
-  path.forEach((square) => console.log(square.name()));
+  // console.log(`The shortest path was ${path.length - 1} moves!`);
+  // console.log("The moves were:");
+  let squareCoord = [];
+  path.forEach((square) => squareCoord.push(square.name()));
+  displayMoves(path, squareCoord);
 };

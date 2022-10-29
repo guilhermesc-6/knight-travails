@@ -49,3 +49,17 @@ img {
 .clear {
   margin-top: 15px;
 }
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.display {
+  width: 250px;
+  height: 200px;
+  background: #ccc;
+  border-radius: 5px;
+  color: black;
+}

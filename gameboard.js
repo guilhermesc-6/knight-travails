@@ -1,3 +1,5 @@
+import { knightsTravails } from "./knight-travails.js";
+
 //Create the chess Board
 const gameboard = () => {
   //create chess board
@@ -47,4 +49,54 @@ const gameboard = () => {
   document.body.appendChild(chessTable);
 };
 
-export { gameboard };
+const resetBoard = (() => {
+  const resetButton = document.querySelector(".clear");
+  resetButton.addEventListener("click", () => {
+    location.reload();
+  });
+})();
+
+const uiController = () => {
+  const cellNodes = document.querySelectorAll("td");
+  cellNodes.forEach((cellNode) => {
+    if (cellNode.querySelector("img" !== null)) {
+      let knightLocation = JSON.parse(`[${cellNode.dataset.coordArray}]`);
+      console.log("Current knight location", knightLocation);
+    }
+
+    cellNode.addEventListener("click", () => {
+      let clickedLocation = JSON.parse(`[${cellNode.dataset.coordArray}]`);
+      console.log("Current location", clickedLocation);
+
+      const cellNodes = document.querySelectorAll("td");
+      cellNodes.forEach((cellNode) => {
+        if (cellNode.querySelector("img") !== null) {
+          let knightLocation = JSON.parse(`[${cellNode.dataset.coordArray}]`);
+          console.log("Current knight location", knightLocation);
+          const knightImg = document.querySelector("img");
+          knightImg.remove();
+          knightsTravails(knightLocation, clickedLocation);
+        }
+      });
+      const knightImg = document.createElement("img");
+      knightImg.src = "./assets/knight.svg";
+      cellNode.appendChild(knightImg);
+    });
+  });
+};
+
+const displayMoves = (path, squareCoord) => {
+  if (document.querySelector("p") !== null) {
+    const displayDiv = document.querySelector(".display");
+    const pNodes = document.querySelectorAll("p");
+    pNodes.forEach((pNode) => pNode.remove());
+  }
+  const displayDiv = document.querySelector(".display");
+  const moves = document.createElement("p");
+  const coordList = document.createElement("p");
+  moves.textContent = `The shortest path was ${path.length - 1} moves!`;
+  coordList.innerHTML = squareCoord.join("<br>");
+  displayDiv.appendChild(moves);
+  displayDiv.appendChild(coordList);
+};
+export { gameboard, uiController, displayMoves };
