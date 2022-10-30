@@ -2,6 +2,10 @@ import { knightsTravails } from "./knight-travails.js";
 
 //Create the chess Board
 const gameboard = () => {
+  //verify if theres a table at screen
+  if (document.querySelector("table")) {
+    document.querySelector("table").remove();
+  }
   //create chess board
   const defaultStartLocation = [0, 0];
   const coordArray = [];
@@ -52,7 +56,8 @@ const gameboard = () => {
 const resetBoard = (() => {
   const resetButton = document.querySelector(".clear");
   resetButton.addEventListener("click", () => {
-    location.reload();
+    gameboard();
+    uiController();
   });
 })();
 
